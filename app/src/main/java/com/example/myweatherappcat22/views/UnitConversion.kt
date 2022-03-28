@@ -8,7 +8,8 @@ fun convertKtoF(tempInK: Double): Float {
     return (((tempInK - 273.15) * (9 / 5)) + 32).toFloat()
 }
 
-fun convertPaToPSI(pressureInPa: Double): Int {
-    return ((pressureInPa / 10) * 0.145038).toInt()
-}
+// this is an extension function, use them instead of a normal functions
+// they are lighter to run and can be used on any double value
+fun Double.convertPaToPSI(): Int =
+    ((this / 10) * 0.145038).toInt()
 

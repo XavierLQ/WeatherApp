@@ -39,7 +39,7 @@ class ForecastViewHolder(private val binding: ForcastItemBinding, private val cl
     fun bind(main: Main, date: String) {
         binding.weatherDate.text=date
         binding.weatherTemp.text = "Temp: ${convertKtoC(main.temp)} C"
-        binding.weatherPressure.text = "Pressure: ${convertPaToPSI(main.pressure)} psi"
+        binding.weatherPressure.text = "Pressure: ${main.pressure.convertPaToPSI()} psi"
         binding.mRating.setProgress(2)
 
         itemView.setOnClickListener{ view ->

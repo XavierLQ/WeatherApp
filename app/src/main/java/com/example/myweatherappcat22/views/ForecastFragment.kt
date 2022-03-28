@@ -104,6 +104,8 @@ class ForecastFragment : BaseFragment(), ClickedWeather  {
     }
 }
 
+// let avoid this using these singletons, you can get the same behavior using the view model
+// passing the data between fragments
 object Holder{
 
     var Temp: String? = null
